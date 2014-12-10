@@ -36,13 +36,13 @@ hp = 15;
 damage = 8;
 close = false;
 seerange = 210;
-stoprange = 210;
-fleerange = 200;
+stoprange = 70;
+fleerange = 50;
 see = false;
 
 // 0 = melee | 1 = range
-attack_type = 0
-attackrange = 14;
+attack_type = 1;
+attackrange = 70;
 attackdelay = 60;
 canattack = true;
 </string>
