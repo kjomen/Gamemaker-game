@@ -42,7 +42,7 @@ see = false;
 
 // 0 = melee | 1 = range
 attack_type = 1;
-attackrange = 70;
+attackrange = 120;
 attackdelay = 60;
 canattack = true;
 </string>
