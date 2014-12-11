@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>///Initializing variables
-//direction = random(359);
 spread = 2.5;
 damage = 10;
 direction = ((obj_MChar.direct + 1) * 180) + random_range(-spread,spread);
@@ -59,7 +58,6 @@ outsideview = false;
             <kind>1</kind>
             <string>///Correct speed set
 speed = 4;
-
 </string>
           </argument>
         </arguments>
@@ -89,12 +87,6 @@ if distance_to_object(obj_BasicFloor) = 0 {
     audio_play_sound(snd_BulletHit,1,0);
     instance_destroy();
 }
-/*
-if distance_to_object(obj_DebugEnemy) = 0 {
-    audio_play_sound(snd_BulletHit,1,0);
-    instance_destroy();
-}
-*/
 
 hit = instance_place(x,y,parent_Mob);
 

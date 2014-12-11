@@ -91,7 +91,7 @@ basic_shield_cooldown = 120;
           <argument>
             <kind>1</kind>
             <string>///Background music
-//audio_play_sound(snd_overworldgrass,0,true);
+audio_play_sound(snd_overworldgrass,0,true);
 </string>
           </argument>
         </arguments>
@@ -248,10 +248,8 @@ if key_fullscreen_check {
 
 if window_get_fullscreen() {
     window_set_fullscreen(false);
-    //view_wview[0] = view_wport[0] / 2;
 } else {
     window_set_fullscreen(true);
-    //view_wview[0] = view_wport[0];
     }
 }
 

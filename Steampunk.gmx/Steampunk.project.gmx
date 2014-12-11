@@ -61,7 +61,6 @@
     <font>fonts\fnt_healthbar2</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_switch</object>
     <objects name="CVboss">
       <object>objects\obj_CVboss_HD</object>
       <object>objects\obj_CVbossBD</object>
@@ -74,7 +73,6 @@
       <object>objects\obj_MChar</object>
       <object>objects\obj_McharArm</object>
       <object>objects\obj_MCharFoot</object>
-      <object>objects\obj_HUD</object>
       <object>objects\HUD</object>
     </objects>
     <objects name="Projectiles">
