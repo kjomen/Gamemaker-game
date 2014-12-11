@@ -35,14 +35,15 @@ grav = .3;
 hp = 15;
 damage = 8;
 close = false;
+w = sprite_width / 2;
 seerange = 210;
-stoprange = 70;
-fleerange = 50;
+stoprange = w;
+fleerange = 0;
 see = false;
 
 // 0 = melee | 1 = range
 attack_type = 1;
-attackrange = 120;
+attackrange = 5;
 attackdelay = 60;
 canattack = true;
 </string>
