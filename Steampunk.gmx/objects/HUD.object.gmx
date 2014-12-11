@@ -120,7 +120,7 @@ draw_text(view_xview[0] + 14,view_yview[0] + view_hview[0] - 42,string(round(hhp
 
 alpha = 1 - (obj_MChar.hp / obj_MChar.maxhp * 2) ;
 draw_set_alpha(alpha);
-draw_set_color(c_red);
+draw_set_color(c_black);
 draw_rectangle(view_xview[0],view_yview[0],view_xview[0] + view_wview[0],view_yview[0] + view_hview[0],false);
 
 draw_set_alpha(1);
