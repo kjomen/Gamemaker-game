@@ -36,7 +36,7 @@ hp = 15;
 damage = 8;
 close = false;
 w = sprite_width / 2;
-seerange = 210;
+seerange = 110;
 stoprange = w;
 fleerange = 0;
 see = false;
@@ -93,21 +93,23 @@ canattack = true;
           <argument>
             <kind>1</kind>
             <string>///AI movement
-if x &lt; obj_MChar.x facing = 1;
-if x &gt; obj_MChar.x facing = -1;
-
 if distance_to_object(obj_MChar) &lt; seerange {
     see = true;
-    hsp = facing * movespeed;
+    
 } else {
     see = false;
-    hsp = 0;
 }
-
+if see = true {
+    if x &lt; obj_MChar.x facing = 1;
+    if x &gt; obj_MChar.x facing = -1;
+} else {
+    if random(150) &lt; 1 and place_meeting(x,y+1,obj_BasicFloor) facing *= -1;
+}
 //Jumping
 if random(100) &lt; jumpchance and place_meeting(x,y+1,obj_BasicFloor) {
     vsp = -jumpspeed;
 }
+hsp = facing * movespeed;
 </string>
           </argument>
         </arguments>
@@ -169,7 +171,9 @@ vspeed = vsp;
 if hsp = 0 and place_meeting(x,y+1,obj_BasicFloor) and see = true and (close = false or flee = true) {
     vsp = -jumpspeed;
 }
-
+if hsp = 0 and place_meeting(x,y+1,obj_BasicFloor) and see = false {
+    facing *= -1;
+}
 /*if hsp = 0 and facing = 1 {
     facing = -1;
 } else if hsp = 0 and facing = -1 {
