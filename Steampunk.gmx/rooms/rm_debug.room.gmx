@@ -54,7 +54,6 @@
     <instance objName="obj_McharArm" x="192" y="224" name="inst_72352950" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="2032" y="352" name="inst_DD278C43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="2192" y="360" name="inst_D852500A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cannonenemy" x="2752" y="360" name="inst_BCFFB6D1" locked="0" code="" scaleX="1" scaleY="0.875" colour="4294967295" rotation="0"/>
     <instance objName="obj_MCharFoot" x="192" y="224" name="inst_2CD881B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ground" x="416" y="352" name="inst_037E4400" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ground" x="448" y="352" name="inst_E5A07F3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -275,6 +274,7 @@
     <instance objName="obj_Floor_Tile" x="3712" y="384" name="inst_320BBC7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Floor_Tile" x="1296" y="308" name="inst_B89B15AF" locked="0" code="" scaleX="0.875" scaleY="0.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_CVbossBD" x="352" y="216" name="inst_210CBFDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cannonenemy" x="2752" y="360" name="inst_BCFFB6D1" locked="0" code="" scaleX="1" scaleY="0.875" colour="4294967295" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="96" y="64" name="inst_C3F32C67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

@@ -29,16 +29,19 @@
     <sprites name="Projectiles">
       <sprite>sprites\spr_BasicUNproj</sprite>
       <sprite>sprites\spr_BasicALTproj_0</sprite>
+      <sprite>sprites\spr_Ignite</sprite>
     </sprites>
     <sprites name="Solids">
       <sprite>sprites\spr_BasicFloor</sprite>
       <sprite>sprites\spr_Floor_Tile</sprite>
       <sprite>sprites\spr_ground</sprite>
+      <sprite>sprites\spr_Brick</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_DebugEnemy1</sprite>
       <sprite>sprites\spr_cowardenemy</sprite>
       <sprite>sprites\sprite19</sprite>
+      <sprite>sprites\spr_Riftwalker</sprite>
     </sprites>
     <sprites name="player">
       <sprite>sprites\spr_MChar</sprite>
