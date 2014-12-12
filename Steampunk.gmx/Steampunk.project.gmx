@@ -88,6 +88,7 @@
     </objects>
     <objects name="Mobs">
       <object>objects\obj_cannonenemy</object>
+      <object>objects\obj_slime</object>
       <object>objects\obj_DebugEnemy</object>
       <object>objects\parent_Mob</object>
     </objects>
