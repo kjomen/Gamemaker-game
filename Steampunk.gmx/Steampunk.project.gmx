@@ -98,6 +98,7 @@
     <timeline>timelines\tl_CVboss_HDbob</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room2</room>
     <room>rooms\room1</room>
     <room>rooms\rm_debug</room>
   </rooms>

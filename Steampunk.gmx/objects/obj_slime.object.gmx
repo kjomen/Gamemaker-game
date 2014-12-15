@@ -30,9 +30,9 @@ hsp = 0;
 facing = choose(-1,1); //-1 = left 1 = right
 movespeed = 1;
 jumpchance = 100 //Percent
-jumpspeed = 5;
+jumpspeed = 4;
 grav = .3;
-hp = 9;
+hp = 15;
 damage = 10;
 close = false;
 w = sprite_width / 2;

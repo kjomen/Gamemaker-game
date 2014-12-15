@@ -41,7 +41,7 @@ hpadd = hpregen;
 dmg_reduction = 5;
 incoming_dmg = 0;
 dmgr = dmg_reduction;
-shield_dmgr = 25;
+shield_dmgr = 90;
 dead = false;
 deadwait = false;
 
@@ -92,8 +92,10 @@ basic_shield_cooldown = 120;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Background music
-audio_play_sound(snd_overworldgrass,0,true);
+            <string>///Creating rest of body
+
+instance_create(x,y,obj_McharArm);
+instance_create(x,y,obj_MCharFoot);
 </string>
           </argument>
         </arguments>
@@ -518,6 +520,30 @@ if hp &lt;= 0 {
 if dead {
     hp = 0
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Background music
+audio_play_sound(snd_overworldgrass,0,true);
 </string>
           </argument>
         </arguments>

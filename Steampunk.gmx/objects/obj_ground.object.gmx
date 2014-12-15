@@ -107,6 +107,12 @@ and topleft.image_index &gt;= 10 and topright.image_index &gt;= 10
 and botleft.image_index &gt;= 10 and botright.image_index &gt;= 10 {
     image_index = 11;
 }
+
+if top.image_index &gt;= 10 and left.image_index &gt;= 10
+and right.image_index &gt;= 10 and bottom
+and topleft.image_index &gt;= 10 and topright.image_index &gt;= 10 {
+    image_index = 11;
+}
 </string>
           </argument>
         </arguments>
