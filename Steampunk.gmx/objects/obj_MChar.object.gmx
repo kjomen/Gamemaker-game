@@ -42,6 +42,8 @@ dmg_reduction = 5;
 incoming_dmg = 0;
 dmgr = dmg_reduction;
 shield_dmgr = 25;
+dead = false;
+deadwait = false;
 
 view_hview[0] = view_hport[0] / 2;
 view_wview[0] = view_wport[0] / 2;
@@ -92,6 +94,29 @@ basic_shield_cooldown = 120;
             <kind>1</kind>
             <string>///Background music
 audio_play_sound(snd_overworldgrass,0,true);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
 </string>
           </argument>
         </arguments>
@@ -459,6 +484,39 @@ if incoming_dmg &gt; 0 {
 
 if keyboard_check_pressed(ord("R")) {
     room_restart();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Dieing
+
+if hp &lt;= 0 {
+    dead = true;
+    if deadwait = false {
+        deadwait = true;
+        alarm[3] = 120;
+    }
+}
+
+if dead {
+    hp = 0
 }
 </string>
           </argument>
