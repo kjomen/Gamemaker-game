@@ -84,6 +84,7 @@
     <objects name="Solids">
       <object>objects\obj_Floor_Tile</object>
       <object>objects\obj_BasicFloor</object>
+      <object>objects\obj_brick</object>
       <object>objects\obj_ground</object>
     </objects>
     <objects name="Mobs">
