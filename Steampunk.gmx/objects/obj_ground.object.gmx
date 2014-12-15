@@ -29,13 +29,26 @@
 image_speed = 0;
 image_index = 0;
 
-left = place_meeting(x-32,y,obj_ground);
-right = place_meeting(x+32,y,obj_ground);
-top = place_meeting(x,y-32,obj_ground);
-topleft = place_meeting(x-32,y-32,obj_ground);
-topright = place_meeting(x+32,y-32,obj_ground);
-
-if left and right and top {
+left = instance_place(x-32,y,obj_ground);
+right = instance_place(x+32,y,obj_ground);
+top = instance_place(x,y-32,obj_ground);
+bot = instance_place(x,y+32,obj_ground);
+topleft = instance_place(x-32,y-32,obj_ground);
+topright = instance_place(x+32,y-32,obj_ground);
+botleft = instance_place(x-32,y+32,obj_ground);
+botright = instance_place(x+32,y+32,obj_ground);
+if (y + 33) &gt; room_height {
+    bottom = true;
+} else {
+    bottom = false;
+}
+if top and left and not topleft {
+    image_index = 8;
+}
+if top and right and not topright {
+    image_index = 9;
+}
+if left and right and top and topleft and topright{
     image_index = 0;
 }
 if left and right and not top {
@@ -59,15 +72,19 @@ if not left and not right and top {
 if not left and not right and not top {
     image_index = 7;
 }
-if left and right and top and topleft and topright {
-    image_index = 8;
+
+if left and right and top and topleft and topright and bot and botleft and botright {
+    image_index = 10;
 }
+if bottom and top and topleft and topright image_index = 10;
+
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -84,36 +101,12 @@ if left and right and top and topleft and topright {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Image index
-/*
-if left and right and top {
-    image_index = 0;
+            <string>if top.image_index &gt;= 10 and left.image_index &gt;= 10
+and right.image_index &gt;= 10 and bot.image_index &gt;= 10 
+and topleft.image_index &gt;= 10 and topright.image_index &gt;= 10
+and botleft.image_index &gt;= 10 and botright.image_index &gt;= 10 {
+    image_index = 11;
 }
-if left and right and not top {
-    image_index = 1;
-}
-if not left and right and not top {
-    image_index = 2;
-}
-if left and not right and not top {
-    image_index = 3;
-}
-if not left and right and top {
-    image_index = 4;
-}
-if left and not right and top {
-    image_index = 5;
-}
-if not left and not right and top {
-    image_index = 6;
-}
-if not left and not right and not top {
-    image_index = 7;
-}
-if left and right and top and topleft and topright {
-    image_index = 8;
-}
-*/
 </string>
           </argument>
         </arguments>
