@@ -45,7 +45,7 @@ randomwalk = false;
 // 0 = melee | 1 = range
 attack_type = 1;
 attackrange = 180;
-attackdelay = 60;
+attackdelay = 20;
 canattack = true;
 </string>
           </argument>
