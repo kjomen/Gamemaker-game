@@ -36,14 +36,15 @@ hp = 15;
 damage = 30;
 close = false;
 w = sprite_width / 2;
-seerange = 110;
-stoprange = w;
+seerange = 180;
+stoprange = 200;
 fleerange = 0;
 see = false;
+randomwalk = false;
 
 // 0 = melee | 1 = range
-attack_type = 0;
-attackrange = 5;
+attack_type = 1;
+attackrange = 180;
 attackdelay = 60;
 canattack = true;
 </string>
@@ -103,13 +104,15 @@ if see = true {
     if x &lt; obj_MChar.x facing = 1;
     if x &gt; obj_MChar.x facing = -1;
 } else {
-    if random(150) &lt; 1 and place_meeting(x,y+1,obj_BasicFloor) facing *= -1;
+    if random(150) &lt; 1 and place_meeting(x,y+1,obj_BasicFloor) and randomwalk = true facing *= -1;
 }
 //Jumping
 if random(100) &lt; jumpchance and place_meeting(x,y+1,obj_BasicFloor) {
     vsp = -jumpspeed;
 }
-hsp = facing * movespeed;
+if see or randomwalk {
+    hsp = facing * movespeed;
+}
 </string>
           </argument>
         </arguments>
@@ -172,7 +175,7 @@ vspeed = vsp;
 if hsp = 0 and place_meeting(x,y+1,obj_BasicFloor) and see = true and (close = false or flee = true) {
     vsp = -jumpspeed;
 }
-if hsp = 0 and place_meeting(x,y+1,obj_BasicFloor) and see = false {
+if hsp = 0 and place_meeting(x,y+1,obj_BasicFloor) and see = false and randomwalk {
     facing *= -1;
 }
 /*if hsp = 0 and facing = 1 {

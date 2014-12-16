@@ -80,6 +80,7 @@
     </objects>
     <objects name="Projectiles">
       <object>objects\obj_basicUNproj</object>
+      <object>objects\obj_enemyproj</object>
     </objects>
     <objects name="Solids">
       <object>objects\obj_Floor_Tile</object>
@@ -89,6 +90,7 @@
     </objects>
     <objects name="Mobs">
       <object>objects\obj_cannonenemy</object>
+      <object>objects\obj_rangeenemy</object>
       <object>objects\obj_slime</object>
       <object>objects\obj_DebugEnemy</object>
       <object>objects\parent_Mob</object>
