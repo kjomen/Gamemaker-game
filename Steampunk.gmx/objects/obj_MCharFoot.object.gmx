@@ -58,7 +58,7 @@ y = obj_MChar.y + 10;
 
 image_xscale = obj_MChar.image_xscale;
 
-if obj_MChar.hsp != 0 or obj_MChar.vsp &lt; 0 {
+if obj_MChar.hsp != 0 or obj_MChar.vsp &lt; -1 {
     image_index = 1;
 } else image_index = 0;
 

@@ -30,6 +30,7 @@ hhpp = 100;
 armorr = 100;
 alphawant = -2;
 alphawantt = 5;
+sound_global_volume(0.1);
 </string>
           </argument>
         </arguments>
@@ -124,6 +125,7 @@ alpha = 1 - (obj_MChar.hp / obj_MChar.maxhp * 2) ;
 alphawant += ((1-(alpha)) - alphawant) * .05;
 alphawantt = 1 - alphawant
 draw_set_alpha(alphawantt);
+audio_master_gain(alphawant);
 draw_set_color(c_black);
 draw_rectangle(view_xview[0],view_yview[0],view_xview[0] + view_wview[0],view_yview[0] + view_hview[0],false);
 
